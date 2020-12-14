@@ -61,7 +61,7 @@ The adversarial loss in SRGAN is generative loss in the GAN,the loss function is
 In our project, we use  least square loss function to calculte the generator and discriminator loss.
 The generator loss is:
 
-![g loss](https://github.com/tjjj686/dl_project_srgan/blob/main/pic/537B152602959027D2492A0507367D86.jpg)
+![g loss](https://github.com/tjjj686/dl_project_srgan/blob/main/pic/F839CAF9C9B171FE2CFFDCEACE761BAC.jpg)
 
 and the discriminator loss is:
 
