@@ -27,7 +27,7 @@ For both LR and HR images, we normalize them with `(0.485, 0.456, 0.406), (0.229
 
 Following the "Photo-Realistic Single Image Super-Resolution Using a Generative Adversarial Network". SRGAN just like a ordinary GAN, has one Generator and one Discriminator, what they do is to find their own maximum profit (lowest loss) to achieve a state (like Nash Equilibria) that the generator can generate the HR images to fool the discriminator. The architecture can be seen at figure 1.
 
-![pic](https://github.com/tjjj686/dl_project_srgan/blob/main/pic/0D1EB002-112A-4400-A63B-511F88F4152C.png)
+![pic](https://github.com/tjjj686/dl_project_srgan/blob/main/pic/epoch_3.jpeg)
 
 *Figure 1: Architecture of Generator and Discriminator Network with corresponding kernel size (k), number of feature maps
 (n) and stride (s) indicated for each convolutional layer. [1]*
