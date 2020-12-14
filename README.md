@@ -14,7 +14,7 @@ In this project, We will look at how to generate high-resolution images from low
 
 ## Method
 
-![: Architecture of Generator and Discriminator Network with corresponding kernel size (k), number of feature maps (n) and stride (s) indicated for each convolutional layer](https://github.com/tjjj686/dl_project_srgan/blob/main/pic/0D1EB002-112A-4400-A63B-511F88F4152C.png)
+![Architecture of Generator and Discriminator Network with corresponding kernel size (k), number of feature maps (n) and stride (s) indicated for each convolutional layer](https://github.com/tjjj686/dl_project_srgan/blob/main/pic/0D1EB002-112A-4400-A63B-511F88F4152C.png)
 
 
 
