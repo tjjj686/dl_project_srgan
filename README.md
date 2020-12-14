@@ -87,5 +87,5 @@ Figure 2. *The images from left to right is **LR images,  bicubic images, SRGAN 
 
 However, when we want to accomplish 8x upscalling. The images begins to have checkerboard effect.
 
-![8 sclar](https://github.com/tjjj686/dl_project_srgan/blob/main/pic/epoch_3.jpeg)
+![8 sclar](https://github.com/tjjj686/dl_project_srgan/blob/main/pic/6BE699B2-8B54-4B03-9790-2C2B42DA1A20.png)
 
