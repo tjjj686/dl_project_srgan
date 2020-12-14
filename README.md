@@ -65,7 +65,7 @@ The generator loss is:
 
 and the discriminator loss is:
 
-![d loss](https://github.com/tjjj686/dl_project_srgan/blob/main/pic/684270E2-A71B-47D2-844C-12DDBA22FEEE.png)
+![d loss](https://github.com/tjjj686/dl_project_srgan/blob/main/pic/BBFCB69961466E7AC17FDB9B3D2BCB7F.jpg)
 
 For optimization, we use adam optimizer with learning rate 1e-5.
 
@@ -88,5 +88,4 @@ Figure 2. *The images from left to right is **LR images,  bicubic images, SRGAN 
 However, when we want to accomplish 8x upscalling. The images begins to have checkerboard effect.
 
 ![8 sclar](https://github.com/tjjj686/dl_project_srgan/blob/main/pic/epoch_3.jpeg)
-
 
