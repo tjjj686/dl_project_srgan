@@ -93,9 +93,17 @@ Figure 3. *The images with 8x upscalling factor and 500 batches from left to rig
 
 When we increase the number of epochs and traning time. The checkerboard effect decreases.
 
+![8 ori](https://github.com/tjjj686/dl_project_srgan/blob/main/pic/scaler_8_epoch_3.jpg)
+
+Figure 4. *The images with 8x upscalling factor and 500 batches from left to right is **LR images,  original HR images, SRGAN generated images** respectively*
+
+
+We also provide a verision that match the color from original images.
+
 ![8 sclar](https://github.com/tjjj686/dl_project_srgan/blob/main/pic/epoch_3.jpeg)
 
-Figure 4. *The images with 8x upscalling factor and 3 epochs from left to right is **LR images,  bicubic images, SRGAN generated images,  original HR images** respectively*
+Figure 5. *The images with 8x upscalling factor and 3 epochs from left to right is **LR images,  bicubic images, SRGAN generated images,  original HR images** respectively*
+
 
 As we can see in the above figures, the SRGAN has a satisfied performance on images with 4x upscalling factor. Even SRGAN use sub-pixel convolution to upsample, when it applied to 8x upscalling factor, the performance still drop. 
 
