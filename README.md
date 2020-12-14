@@ -34,6 +34,62 @@ Following the "Photo-Realistic Single Image Super-Resolution Using a Generative 
 
 **3. Loss Function** 
 
+ - Generator loss
+
+Generator in SRGAN use perceptual loss. The perceptual loss can be defined as:
+ ![Perceptual loss](https://github.com/tjjj686/dl_project_srgan/blob/main/pic/image.png)
+
+
+The perceptual loss is the weighted sum of a content loss and an adversarial loss. 
+
+ - Content Loss
+
+In the SRGAN,  the content loss is basically the pixel-wise MSE loss between the last feature maps of a pre-trained VGG network from the LR and HR images. It can be calculated as:
+
+![vgg content loss](https://github.com/tjjj686/dl_project_srgan/blob/main/pic/3DE85850-7AE8-4AD2-9686-C41CCE054DD5.png)
+
+Here W and H just the dimensions of the respective feature maps.
+
+In our work, however, we use L1 loss function instead of MSE loss funtion.
+
+ - Adversarial Loss
+
+The adversarial loss in SRGAN is generative loss in the GAN,the loss function is:
+
+![generative loss](https://github.com/tjjj686/dl_project_srgan/blob/main/pic/A426050B-3433-44E0-84E2-41CF6BD8F97E.png)
+
+In our project, we use  least square loss function to calculte the generator and discriminator loss.
+The generator loss is:
+
+$$\ell_G = -\mathbb{E}_{z \sim p(z)}\left[\log D(G(z))\right]$$
+
+and the discriminator loss is:
+
+$$ \ell_D = -\mathbb{E}_{x \sim p_\text{data}}\left[\log D(x)\right] - \mathbb{E}_{z \sim p(z)}\left[\log \left(1-D(G(z))\right)\right]$$
+
+For optimization, we use adam optimizer with learning rate 1e-5.
+
+## Experiment
+
+For the purpose of having the same color as original preprocessed HR images, we also use Tanh activation function after last convolution and scale it with 2.38 and add bias 0.26 in generator network to match the original HR images range.
+
+To better evaluate the performance, we also use  bicubic interpolation (popular method for improving image resolution) for comparison. Therefore the output images are LR images, bicubic images, SRGAN generated images, original HR images.
+
+We finally train 3 epochs with 4x and 8x upscalling factor on 20,000 images from CelebA. It costs about 24 hours by using  NVIDIA GPU on Colab. The generated HR images look pretty similar with the original HR images. We run 3 epoch on such large datasets because it can reduce the checkboard effect if we take more images into training.
+
+## Result and Example
+
+At first, we use 4x upscalling factor and just after few batches, it shows good results. 
+
+![enter image description here](https://github.com/tjjj686/dl_project_srgan/blob/main/pic/epoch_1_4scaler.jpeg)
+
+The images from left to right is **LR images,  bicubic images, SRGAN generated images,  original HR images** respectively.
+
+*Figure 1: Architecture of Generator and Discriminator Network with corresponding kernel size (k), number of feature maps
+(n) and stride (s) indicated for each convolutional layer. [1]*
+
+**3. Loss Function** 
+
  
 
  - Generator loss
