@@ -56,16 +56,16 @@ In our work, however, we use L1 loss function instead of MSE loss funtion.
 
 The adversarial loss in SRGAN is generative loss in the GAN,the loss function is:
 
-![generative loss](https://github.com/tjjj686/dl_project_srgan/blob/main/pic/A426050B-3433-44E0-84E2-41CF6BD8F97E.png)
+![adversarial loss](https://github.com/tjjj686/dl_project_srgan/blob/main/pic/BAE81DFD-A84D-45E4-B55C-C75B23DA0F35.png)
 
 In our project, we use  least square loss function to calculte the generator and discriminator loss.
 The generator loss is:
 
-$$\ell_G = -\mathbb{E}_{z \sim p(z)}\left[\log D(G(z))\right]$$
+![g loss](https://github.com/tjjj686/dl_project_srgan/blob/main/pic/4A576B89-D9C8-45F8-9ACB-6DDD0A70AA76.png)
 
 and the discriminator loss is:
 
-$$ \ell_D = -\mathbb{E}_{x \sim p_\text{data}}\left[\log D(x)\right] - \mathbb{E}_{z \sim p(z)}\left[\log \left(1-D(G(z))\right)\right]$$
+![d loss](https://github.com/tjjj686/dl_project_srgan/blob/main/pic/684270E2-A71B-47D2-844C-12DDBA22FEEE.png)
 
 For optimization, we use adam optimizer with learning rate 1e-5.
 
@@ -83,9 +83,9 @@ At first, we use 4x upscalling factor and just after few batches, it shows good 
 
 ![enter image description here](https://github.com/tjjj686/dl_project_srgan/blob/main/pic/epoch_1_4scaler.jpeg)
 
-*Figure 2. left to right is LR images,  bicubic images, SRGAN generated images,  original HR images respectively.*
+Figure 2. *The images from left to right is **LR images,  bicubic images, SRGAN generated images,  original HR images** respectively*
 
+However, when we want to accomplish 8x upscalling. The images begins to have checkerboard effect.
 
-
-
+![8 sclar](https://github.com/tjjj686/dl_project_srgan/blob/main/pic/epoch_3.jpeg)
 
