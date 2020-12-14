@@ -39,6 +39,7 @@ Following the "Photo-Realistic Single Image Super-Resolution Using a Generative 
  - Generator loss
 
 Generator loss in SRGAN is also known as perceptual loss. It can be defined as 
+
  ![Perceptual loss](https://github.com/tjjj686/dl_project_srgan/blob/main/pic/image.png)
 
 
