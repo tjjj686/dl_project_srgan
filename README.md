@@ -83,19 +83,19 @@ At first, we use 4x upscalling factor and just after few batches, it shows good 
 
 ![enter image description here](https://github.com/tjjj686/dl_project_srgan/blob/main/pic/epoch_1_4scaler.jpeg)
 
-Figure 2. *The images with 4x upscalling factor from left to right is **LR images,  original HR images, SRGAN generated images** respectively*
+Figure 2. *The images with 4x upscalling factor from left to right is **LR images,  bicubic images, SRGAN generated images,  original HR images** respectively*
 
 However, when we want to accomplish 8x upscalling. The images begins to have checkerboard effect.
 
 ![check](https://github.com/tjjj686/dl_project_srgan/blob/main/pic/scaler_8_epoch_1_batch_500.jpg)
 
-Figure 3. *The images with 8x upscalling factor and 500 batches from left to right is **LR images,  bicubic images, SRGAN generated images,  original HR images** respectively*
+Figure 3. *The images with 8x upscalling factor and 500 batches from left to right is **LR images,  original HR images, SRGAN generated images** respectively*
 
 When we increase the number of epochs and traning time. The checkerboard effect decreases.
 
 ![8 sclar](https://github.com/tjjj686/dl_project_srgan/blob/main/pic/epoch_3.jpeg)
 
-Figure 3. *The images with 8x upscalling factor and 3 epochs from left to right is **LR images,  bicubic images, SRGAN generated images,  original HR images** respectively*
+Figure 4. *The images with 8x upscalling factor and 3 epochs from left to right is **LR images,  bicubic images, SRGAN generated images,  original HR images** respectively*
 
 As we can see in the above figures, the SRGAN has a satisfied performance on images with 4x upscalling factor. Even SRGAN use sub-pixel convolution to upsample, when it applied to 8x upscalling factor, the performance still drop. 
 
