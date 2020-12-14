@@ -61,7 +61,7 @@ The adversarial loss in SRGAN is generative loss in the GAN,the loss function is
 In our project, we use  least square loss function to calculte the generator and discriminator loss.
 The generator loss is:
 
-![g loss](https://github.com/tjjj686/dl_project_srgan/blob/main/pic/4A576B89-D9C8-45F8-9ACB-6DDD0A70AA76.png)
+![g loss](https://github.com/tjjj686/dl_project_srgan/blob/main/pic/537B152602959027D2492A0507367D86.jpg)
 
 and the discriminator loss is:
 
@@ -88,4 +88,5 @@ Figure 2. *The images from left to right is **LR images,  bicubic images, SRGAN 
 However, when we want to accomplish 8x upscalling. The images begins to have checkerboard effect.
 
 ![8 sclar](https://github.com/tjjj686/dl_project_srgan/blob/main/pic/epoch_3.jpeg)
+
 
