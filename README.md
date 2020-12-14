@@ -58,7 +58,7 @@ The adversarial loss in SRGAN is generative loss in the GAN,the loss function is
 
 ![adversarial loss](https://github.com/tjjj686/dl_project_srgan/blob/main/pic/BAE81DFD-A84D-45E4-B55C-C75B23DA0F35.png)
 
-In our project, we use  least square loss function to calculte the generator and discriminator loss.
+In our project, we use  least square loss function[2] to calculte the generator and discriminator loss.
 The generator loss is:
 
 ![g loss](https://github.com/tjjj686/dl_project_srgan/blob/main/pic/F839CAF9C9B171FE2CFFDCEACE761BAC.jpg)
@@ -83,10 +83,28 @@ At first, we use 4x upscalling factor and just after few batches, it shows good 
 
 ![enter image description here](https://github.com/tjjj686/dl_project_srgan/blob/main/pic/epoch_1_4scaler.jpeg)
 
-Figure 2. *The images from left to right is **LR images,  bicubic images, SRGAN generated images,  original HR images** respectively*
+Figure 2. *The images with 4x upscalling factor from left to right is **LR images,  bicubic images, SRGAN generated images,  original HR images** respectively*
 
 However, when we want to accomplish 8x upscalling. The images begins to have checkerboard effect.
 
+![check](https://github.com/tjjj686/dl_project_srgan/blob/main/pic/scaler_8_epoch_1_batch_500.jpg)
+
+Figure 3. *The images with 8x upscalling factor and 500 batches from left to right is **LR images,  bicubic images, SRGAN generated images,  original HR images** respectively*
+
+When we increase the number of epochs and traning time. The checkerboard effect decreases.
+
 ![8 sclar](https://github.com/tjjj686/dl_project_srgan/blob/main/pic/epoch_3.jpeg)
 
+Figure 3. *The images with 8x upscalling factor and 3 epochs from left to right is **LR images,  bicubic images, SRGAN generated images,  original HR images** respectively*
 
+As we can see in the above figures, the SRGAN has a satisfied performance on images with 4x upscalling factor. Even SRGAN use sub-pixel convolution to upsample, when it applied to 8x upscalling factor, the performance still drop. 
+
+In the later work, we could focus on how to eliminate the checkerboard effect due to large upscalling factor.
+
+
+## Reference
+[1] Ledig C, Theis L, Huszár F, et al. Photo-realistic single image super-resolution using a generative adversarial network[C]//Proceedings of the IEEE conference on computer vision and pattern recognition. 2017: 4681-4690.
+
+[2]Mao X, Li Q, Xie H, et al. Least squares generative adversarial networks[C]//Proceedings of the IEEE international conference on computer vision. 2017: 2794-2802.
+
+[3]https://github.com/eriklindernoren/PyTorch-GAN/tree/master/implementations/srgan
