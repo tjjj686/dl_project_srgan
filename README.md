@@ -83,22 +83,7 @@ At first, we use 4x upscalling factor and just after few batches, it shows good 
 
 ![enter image description here](https://github.com/tjjj686/dl_project_srgan/blob/main/pic/epoch_1_4scaler.jpeg)
 
-The images from left to right is **LR images,  bicubic images, SRGAN generated images,  original HR images** respectively.
-
-*Figure 1: Architecture of Generator and Discriminator Network with corresponding kernel size (k), number of feature maps
-(n) and stride (s) indicated for each convolutional layer. [1]*
-
-**3. Loss Function** 
-
- 
-
- - Generator loss
-
-Generator loss in SRGAN is also known as perceptual loss. It can be defined as 
-
- ![Perceptual loss](https://github.com/tjjj686/dl_project_srgan/blob/main/pic/image.png)
-
-
+*Figure 2. left to right is LR images,  bicubic images, SRGAN generated images,  original HR images respectively.*
 
 
 
